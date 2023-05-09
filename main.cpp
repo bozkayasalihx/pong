@@ -91,22 +91,21 @@ void Input()
 
 int main()
 {
-    initscr(); // Initialize the window
-    nodelay(stdscr, TRUE); // Doesn't wait for user input in getch()
-    keypad(stdscr, TRUE); // Initialize keypad
-    noecho(); // Doesn't show the input from user
-    curs_set(0); // Makes cursor invisible
+    initscr(); 
+    nodelay(stdscr, TRUE); 
+    keypad(stdscr, TRUE); 
+    noecho(); 
+    curs_set(0); 
 
     Setup();
     while (!gameOver)
     {
         Draw();
         Input();
-        // Logic();
-        napms(50); // sleep for 50 milliseconds
+        napms(50); 
     }
 
-    endwin(); // End the window
+    endwin(); 
     return 0;
 }
 
